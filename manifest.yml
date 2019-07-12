@@ -1,6 +1,9 @@
 ---
 applications:
-- name: cf-nodejs
+- name: node-sample
   memory: 512M
   instances: 1
-  random-route: true
+  routes:
+  - route: node-sample-hiren-test.cfapps.io/
+  services:
+  - redis
